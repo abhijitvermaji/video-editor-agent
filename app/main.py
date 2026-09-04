@@ -165,4 +165,4 @@ def download(filename: str):
     file_path = OUTPUT_DIR / filename
     if not file_path.exists():
         raise HTTPException(404, "File nahi mili")
-    return FileResponse(file_path,
+    return FileResponse(file_path,media_type="video/mp4", filename=filename)
